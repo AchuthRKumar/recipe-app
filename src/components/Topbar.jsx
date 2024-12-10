@@ -9,7 +9,7 @@ function Topbar() {
                 <HStack gap="7">
                     <Link href="#">Home</Link>
                     <Link href="#">About</Link>
-                    <Text textStyle="5xl" margin="5px" className="tangerine-font"> Get Cooking </Text>
+                    <Text textStyle="6xl" margin="5px" className="tangerine-font"> Get Cooking </Text>
                     <Link href="#">Recipes</Link>
                     <Link href="#">Shop</Link>
                 </HStack>
