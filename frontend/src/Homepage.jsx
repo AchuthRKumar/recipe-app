@@ -2,6 +2,9 @@ import Topbar from "./components/Topbar";
 import Home from "./components/Home";
 import Foodcard from "./components/FoodCard";
 import Footer from "./components/Footer";
+import dosa from "./assets/Dosa.jpg"
+import idli from "./assets/idli.jpg"
+import { Flex } from "@chakra-ui/react";
 
 function Homepage(){
     return(
@@ -10,7 +13,7 @@ function Homepage(){
             <br />
             <Home />
             <br />
-            <Foodcard dish={"Dosa"}/>
+            
             <br />
             <Footer />
         </div>

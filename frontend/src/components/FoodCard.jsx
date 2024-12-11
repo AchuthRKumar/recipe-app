@@ -1,23 +1,30 @@
 import { Image, Card, Button, Center, Flex } from "@chakra-ui/react";
-import Dosa from "../assets/Dosa.jpg"
-import Idli from "../assets/Idli.jpg";
+import { useState } from "react";
 
-function Foodcard({dish}){
+
+function Foodcard({dish, desc, img}){
+
+  const [hovered, setHovered] = useState(false);
+
     return(
       <div>
         <Flex gap="4">
         <Card.Root maxW="sm" size="sm" overflow="hidden" rounded="lg" style={{ textAlign: 'justify'}}>
-                <Image src={Dosa} alt="Dosa" />
+                <Image src={img} alt="Dosa" />
                 <Card.Body gap="2">
                     <Card.Title>{dish}</Card.Title>
-                    <Card.Description>Dosa is a thin, crispy Indian crepe made from fermented batter, often served with sambar and chutney.</Card.Description>
+                    <Card.Description>{desc}</Card.Description>
                 </Card.Body>
                 <Center>
                 <Card.Footer>
-                    <Button variant="solid"> Cook Now</Button>
+                    <Button variant="solid" 
+                      rounded={hovered ? "xl" : "sm"}
+                      onMouseEnter={() => setHovered(true)}  
+                      onMouseLeave={() => setHovered(false)}> 
+                      Cook Now
+                    </Button>
                 </Card.Footer>
                 </Center>
-                
           </Card.Root>
         </Flex>
       </div>  
