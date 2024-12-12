@@ -1,4 +1,4 @@
-import { Text, Center, Stack, Separator, HStack, Button, VStack, Flex, Image } from "@chakra-ui/react";
+import { Text, Center, Stack, Separator, HStack, Button, VStack, Flex, Image, Card } from "@chakra-ui/react";
 import dosa from "../assets/Dosa.jpg"
 import idli from "../assets/Idli.jpg"
 import biryani from "../assets/Biryani.jpg"
@@ -19,18 +19,27 @@ function Home(){
                 </HStack>
 
                 <Center>
-                <VStack gap="4">
-                <Text textStyle="xl">AI-Powered Recipes, Crafted for You !</Text>
+                    <Card.Root width="800px" >
+                        <Card.Body gap="2">
+                            <Card.Title>Start Cooking, Start Creating</Card.Title>
+                            <Card.Description>
+                            Tired of scrolling through endless recipes? Our AI-powered chef simplifies your cooking experience. Get personalized recipes tailored to your taste, detailed nutritional information, and step-by-step visual guides to bring your dishes to life. It's like having a personal chef, right at your fingertips.
+                            </Card.Description>
+                        </Card.Body>
+                    </Card.Root>
+                </Center>
+
+                <Center>
                 <Button variant="surface"> Try our AI Chef</Button>
-                </VStack>
-                </Center>  
+                </Center>
             </Stack>
-            
-            <Flex gap="4" wrap="wrap" justify="center">
-                <Image src={dosa} width="350px"/>
-                <Image src={idli} width="350px"/>
-                <Image src={gjamun} width="350px"/>
-                <Image src={biryani} width="350px"/>
+
+            <br />
+            <Flex gap="2" wrap="wrap" justify="center">
+                <Image src={dosa} width="350px" rounded="lg"/>
+                <Image src={idli} width="350px" rounded="lg"/>
+                <Image src={gjamun} width="350px" rounded="lg"/>
+                <Image src={biryani} width="350px" rounded="lg"/>
             </Flex>
         </div>
     );
